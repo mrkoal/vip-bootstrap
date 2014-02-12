@@ -1,0 +1,189 @@
+// @use : vip bootstrap tips
+// @editor : mss.huang
+// @last modified time : 2014.1.15
+// @verson : 0.1
+
+
+// 大提示框
+.m-tips-big {
+	position: relative;
+	padding: 19px 0 19px 98px;
+	border-radius: 2px;
+	zoom: 1;
+	font-family: s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
+
+	.title {
+		line-height: 38px;
+		font-size: 18px;
+		color: #41413c;
+		font-weight: normal;
+	}
+
+	.info {
+		line-height: 24px;
+		font-size: 14px;
+		color: #a6a4a2;
+	}
+
+	i {
+		position:absolute;
+		left: 28px;
+		top: 25px;
+		font-size: 50px;
+	}
+
+	.if-close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 10px;
+		font-size: 8px;
+		color: #a6a5a5;
+	}
+}
+
+// 常规型提示框
+.m-tips-nor {
+	position: relative;
+	padding-left: 15px;
+	line-height: 40px;
+	border-radius: 2px;
+	zoom: 1;
+	font-family: s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
+	.info {
+		font-size: 14px;
+		color: #a6a4a2;
+	}
+
+	i {
+		font-size: 16px;
+		vertical-align: -1px;
+		margin-right: 13px;
+	}
+
+	.if-close {
+		position: absolute;
+		right: 0;
+		top: 6px;
+		padding: 10px;
+		font-size: 8px;
+		color: #a6a5a5;
+	}
+}
+
+// 常规错误提示框
+.m-tips1 {
+	background-color: #fffbf3;
+	border: 1px solid #f8dcb0;
+
+	i {
+		color: #f9a123;
+	}
+}
+
+// 信息提示框
+.m-tips2 {
+	background-color: #dff1f8;
+	border: 1px solid #b4e1f3;
+
+	i {
+		color: #249fdf;
+	}
+}
+
+// 成功提示框
+.m-tips3 {
+	background-color: #dff2d9;
+	border: 1px solid #c1e0af;
+
+	i {
+		color: #47b85c;
+	}
+}
+
+// 严重错误提示框
+.m-tips4 {
+	background-color: #f4e5e5;
+	border: 1px solid #ebced0;
+
+	i {
+		color: #f64a4a;
+	}
+}
+
+// 气泡提示模块
+.m-tips-pop {
+	position:absolute;
+	width: 302px;
+	background-color: #fffaf3;
+	border-width: 1px;
+	border-color: #f9dfba #f8dbb1 #f7deb9;
+	border-style: solid;
+	border-radius: 2px;
+
+	.arrow,.arrow1 {
+		position: absolute;
+		border-width: 6px 5px;
+		border-style: solid dashed dashed;
+		font-size: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.arrow {
+		border-color: #f7deb9 transparent transparent;
+		left: 50px;
+		bottom: -12px;
+	}
+
+	.arrow1 {
+		border-color: #fffaf3 transparent transparent;
+		left: 50px;
+		bottom: -11px;
+	}
+
+	.if-close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 8px;
+		font-size: 8px;
+		color: #a6a5a5;
+	}
+
+	.cnt {
+		padding: 15px;
+	}
+}
+
+// webkit内核小于12px字需要用transform来解决
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	$tips-close-btn {
+		right: -7px;
+		font-size: 12px;
+		-webkit-transform: scale(.67);
+	}
+	.m-tips-big {
+		.if-close {
+			top: -6px;
+			padding: 15px;
+			@extend $tips-close-btn;
+		}
+	}
+
+	.m-tips-nor {
+		.if-close {
+			top: 0;
+			padding: 15px;
+			@extend $tips-close-btn;
+		}
+	}
+
+	.m-tips-pop {
+		.if-close {
+			top: -5px;
+			padding: 12px;
+			@extend $tips-close-btn;
+		}
+	}
+}

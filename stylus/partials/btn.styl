@@ -1,0 +1,270 @@
+// @use : vip bootstrap button
+// @editor : mss.huang
+// @last modified time : 2014.1.15
+// @verson : 0.3
+
+
+
+// 大按钮
+.u-btn-big {
+	display: inline-block;
+	padding: 0 28px;
+	font: 18px/42px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
+	border-radius: 5px;
+	transition: all .5s ease-out;
+	-webkit-transition: all .5s ease-out; 
+
+	i {
+		margin-right: 13px;
+	}
+
+	.if-shopping-bag {
+		font-size: 22px;
+		vertical-align: text-bottom;
+		_vertical-align: 0;
+	}
+
+	.if-card {
+		font-size: 16px;
+	}
+
+	.ii-loading-wrap {
+		padding: 5px 0;
+		_padding: 4px 0;
+		*vertical-align: middle;
+	}
+}
+
+// 消除ie9的滤镜
+:root .u-btn-big,
+:root .u-btn-big:hover,
+:root .u-btn-big:active,
+:root .u-btn-nor,
+:root .u-btn-nor:hover,
+:root .u-btn-nor:active,
+:root .u-btn-mini,
+:root .u-btn-mini:hover,
+:root .u-btn-mini:active,
+:root .u-btn-tips,
+:root .u-btn-tips:hover,
+:root .u-btn-tips:active, {
+	filter: none;
+}
+
+// 普通按钮
+.u-btn-nor {
+	display: inline-block;
+	padding: 0 25px;
+	font: 12px/28px s('arial,\5B8B\4F53,sans-serif');
+	border-radius: 4px;
+	transition: all .5s ease-out;
+	-webkit-transition: all .5s ease-out;
+
+	i {
+		vertical-align: middle;
+	}
+}
+
+// 小按钮
+.u-btn-mini {
+	display: inline-block;
+	padding: 0 10px;
+	font: 12px/18px s('arial,\5B8B\4F53,sans-serif');
+	border-radius: 4px;
+	transition: all .5s ease-out;
+	-webkit-transition: all .5s ease-out;
+}
+
+// 提示功能类大按钮
+.u-btn-tips {
+	display: inline-block;
+	padding: 0 11px;
+	font: 14px/34px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
+	border-radius: 3px;
+	transition: all .5s ease-out;
+	-webkit-transition: all .5s ease-out;
+	color: #181818;
+	background: rgba(255,255,255,.8);
+	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ccffffff, endcolorstr=#ccffffff)');
+
+	i {
+		margin-right: 5px;
+	}
+
+	.if-add {
+		color: #3c9705;
+		font-size: 12px;
+	}
+
+	.if-close {
+		display: inline-block;
+		_display: inline;
+		color: #f10123;
+		font-size: 10px;
+		-webkit-transform: scale(.83);
+		_vertical-align: 2px;
+	}
+
+	.if-movie {
+		color: #db3184;
+		font-size: 13px;
+		margin: 0 0 0 5px;
+	}
+
+	.if-tick {
+		display: inline-block;
+		_display: inline;
+		color: #3c9705;
+		font-size: 11px;
+		-webkit-transform: scale(.91);
+	}
+
+	&:hover {
+		background: #fff;
+		color: #181818;
+		filter: none;
+	}
+}
+
+// 提示功能类小按钮
+.u-btn-tips1 {
+	padding: 0 6px;
+	font: 12px/24px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
+
+	.if-heart {
+		display: inline-block;
+		_display: inline;
+		color: #9b9a9a;
+		font-size:9px;
+		-webkit-transform: scale(.75);
+		_vertical-align: 3px;
+	}
+}
+
+// 提示功能类按钮已点击
+.u-btn-active {
+	background: #fff;
+	color: #181818;
+	filter: none;
+
+	.if-heart {
+		color: #cb2e7c;
+	}
+}
+
+
+// 唯品红按钮
+.u-btn1 {
+	background-color: #df3286;
+	background-image: -webkit-linear-gradient(top,#e03589,#dd2f82);
+	background-image: linear-gradient(to bottom,#e03589,#dd2f82);
+	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e03589, endcolorstr=#dd2f82)');
+	color: #f4eaee;
+	border: 1px solid #ce2b78;
+
+	&:hover {
+		background-color: #e3418f;
+		background-image: -webkit-linear-gradient(top,#e44493,#e23e8b);
+		background-image: linear-gradient(to bottom,#e44493,#e23e8b);
+		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e44493, endcolorstr=#e23e8b)');
+		color: #f4eaed;
+	}
+
+	&:active {
+		background-color: #db3284;
+		background-image: -webkit-linear-gradient(top,#da3083,#dc3386);
+		background-image: linear-gradient(to bottom,#da3083,#dc3386);
+		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#da3083, endcolorstr=#dc3386)');
+		color: #ebe1e7;
+		box-shadow: inset 0 2px 4px rgba(0,0,0,.05);
+		-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.05);
+	}
+}
+
+// 浅红按钮
+.u-btn2 {
+	background-color: #fcf0f5;
+	background-image: -webkit-linear-gradient(top,#fdf5f8,#fbeef4);
+	background-image: linear-gradient(to bottom,#fdf5f8,#fbeef4);
+	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fdf5f8, endcolorstr=#fbeef4)')
+	color: #fb4892;
+	border: 1px solid #eea3c2;
+
+	&:hover {
+		background-color: #fef7fa;
+		background-image: -webkit-linear-gradient(top,#fefafb,#fdf4f8);
+		background-image: linear-gradient(to bottom,#fefafb,#fdf4f8);
+		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fefafb, endcolorstr=#fdf4f8)');
+		color: #fb4892;
+		border-color: #f38ab6;
+	}
+
+	&:active {
+		background-color: #f9e6ee;
+		background-image: -webkit-linear-gradient(top,#f7e4ec,#fbe8f0);
+		background-image: linear-gradient(to bottom,#f7e4ec,#fbe8f0);
+		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f7e4ec, endcolorstr=#fbe8f0)');
+		color: #f965a2;
+		border-color: #f08ab4;
+		box-shadow: inset 0 2px 4px rgba(182,10,78,.08);
+		-webkit-box-shadow: inset 0 2px 4px rgba(182,10,78,.08);
+	}
+}
+
+// 浅灰按钮
+.u-btn3 {
+	background-color: #f6f4f4;
+	background-image: -webkit-linear-gradient(top,#f8f8f8,#f3f0f0);
+	background-image: linear-gradient(to bottom,#f8f8f8,#f3f0f0);
+	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f8f8f8, endcolorstr=#f3f0f0)')
+	color: #464646;
+	border: 1px solid #c3c3c3;
+
+	&:hover {
+		background-color: #f5f5f5;
+		background-image: -webkit-linear-gradient(top,#fcfbfb,#f0f0f0);
+		background-image: linear-gradient(to bottom,#fcfbfb,#f0f0f0);
+		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fcfbfb, endcolorstr=#f0f0f0)');
+		color: #464646;
+	}
+
+	&:active {
+		background-color: #ecebeb;
+		background-image: -webkit-linear-gradient(top,#efeeee,#e8e7e7);
+		background-image: linear-gradient(to bottom,#efeeee,#e8e7e7);
+		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#efeeee, endcolorstr=#e8e7e7)');
+		color: #464646;
+		border-color: #c0bfc0;
+		box-shadow: inset 0 2px 4px rgba(182,10,78,.06);
+		-webkit-box-shadow: inset 0 2px 4px rgba(182,10,78,.06);
+	}
+}
+
+// 按钮不可点击及处理中
+.u-btn-disable {
+	&,&:hover,&:active {
+		border: 1px solid #c1c1c1;
+		color: #9b9a9a;
+		background: #d2d1d1;
+		cursor: not-allowed;
+	}
+}
+
+// 按钮loading动画
+.ii-loading {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('data:image/gif;base64,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');
+    *background-image: url('../img/loading.gif');
+   	background-repeat: no-repeat;
+   	overflow: hidden;
+}
+
+// 可以处理inline-block图片图标对文字产生的影响,和图片图标搭配，例如ii-loading
+.u-btn-txt {
+	display: inline-block;
+	vertical-align: top;
+	*vertical-align: middle;
+}

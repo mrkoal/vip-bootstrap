@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vip ui bootstrap</title>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/comm.css">
+	<style>
+		#colorSelect{display: none;text-align: center;}
+		#colorSelect .cnt{padding: 10px;}
+		#selectColor1,#change1,#selectColor2,#change2{vertical-align: middle;margin: 0 5px;}
+		#selectColor2{width: 60px;}
+	</style>
+</head>
+<body>
+	<article class="g-main">
+			<header class="m-head">
+				<h1 class="title">Vip.com UI Bootstrap</h1>
+				<h2 class="editor">——mss.f2e</h2>
+			</header>
+			<section class="m-box">
+				<h3 class="u-type">Warning for F2E</h3>
+				<p>1、这是有关于vip整站的ui规范，引用的时候注意<em>严禁修改原样式</em>，只能采取额外增加class或者通过父元素来覆盖、新增属性。</p>
+				<p>2、本规范采取的是类nec的命名法，各位注意命名的时候别把类似.title,.info,.tips,.arrow等当作名字单独赋予样式，这些名字都是原本无意义的，因为他只在当前模块或元件中生效，同样的样式名可以在不同的模块或元件中重复使用，互不干扰。</p>
+				<p>3、为了提高灵活性和减少苦逼程度，以后会逐渐地增加font-face的方式来代替现在的图片icon，相关的注意情况后续会有Wiki说明，请注意。</p>
+			</section>
+			<section class="m-box" id="button">
+				<h3 class="u-type">Buttons</h3>
+				<p class="bs-tips">1、大按钮，先引入<em>.u-btn-big</em>类作基础准备，大按钮中的图标引入对应的字体图标，图标颜色默认继承，可单独设置颜色。</p>
+				<p class="bs-info">唯品红按钮在前者增加<em>.u-btn1</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-big u-btn1"><i class="vipFont if-shopping-bag"></i>放入购物袋</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-big u-btn1"&gt;&lt;i class="vipFont if-shopping-bag"&gt;&lt;/i&gt;放入购物袋&lt;/a&gt;</p>
+				<p class="bs-info">浅红按钮在前者增加<em>.u-btn2</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-big u-btn2"><i class="vipFont if-card"></i>立即购买</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-big u-btn2"&gt;&lt;i class="vipFont if-card"&gt;&lt;/i&gt;立即购买&lt;/a&gt;</p>
+				<p class="bs-info">不可点击按钮在前者增加<em>.u-btn-disable</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-big u-btn-disable"><i class="ii-loading"></i><span class="u-btn-txt">处理中...</span></a><a href="javascript:;" role="button" class="u-btn-big u-btn-disable"><i class="vipFont if-shopping-bag"></i>放入购物袋</a><a href="javascript:;" role="button" class="u-btn-big u-btn-disable"><i class="vipFont if-card"></i>立即购买</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-big u-btn-disable"&gt;&lt;i class="ii-loading"&gt;&lt;/i&gt;&lt;span class="u-btn-txt"&gt;处理中...&lt;/span&gt;&lt;/a><br>&lt;a href="javascript:;" role="button" class="u-btn-big u-btn-disable"&gt;&lt;i class="vipFont if-shopping-bag"&gt;&lt;/i&gt;放入购物袋&lt;/a&gt;<br>&lt;a href="javascript:;" role="button" class="u-btn-big u-btn-disable"&gt;&lt;i class="vipFont if-card"&gt;&lt;/i&gt;立即购买&lt;/a&gt;</p>
+				<p class="bs-tips">2、普通大小按钮，先引入<em>.u-btn-nor</em>类作基础准备。</p>
+				<p class="bs-info">唯品红按钮在前者基础上增加<em>.u-btn1</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-nor u-btn1">保存支付方式</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-nor u-btn1"&gt;保存支付方式&lt;/a&gt;</p>
+				<p class="bs-info">浅红按钮在前者增加<em>.u-btn2</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-nor u-btn2">保存收货信息</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-nor u-btn2"&gt;保存收货信息&lt;/a&gt;</p>
+				<p class="bs-info">浅灰按钮在前者增加<em>.u-btn3</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-nor u-btn3">保存收货信息</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-nor u-btn3"&gt;保存收货信息&lt;/a&gt;</p>
+				<p class="bs-info">不可点击按钮在前者增加<em>.u-btn-disable</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-nor u-btn-disable">保存支付方式</a><a href="javascript:;" role="button" class="u-btn-nor u-btn-disable">保存收货信息</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-nor u-btn-disable"&gt;保存支付方式&lt;/a&gt;<br>&lt;a href="javascript:;" role="button" class="u-btn-nor u-btn-disable"&gt;保存收货信息&lt;/a&gt;</p>
+				<p class="bs-tips">3、小按钮，先引入<em>.u-btn-mini</em>类作基础准备。</p>
+				<p class="bs-info">浅红按钮在前者基础上增加<em>.u-btn2</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-mini u-btn2">使用</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-mini u-btn2"&gt;使用&lt;/a&gt;</p>
+				<p class="bs-info">浅灰按钮在前者增加<em>.u-btn3</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-mini u-btn3">使用</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-mini u-btn3"&gt;使用&lt;/a&gt;</p>
+				<p class="bs-tips">4、提示功能类按钮，先引入<em>.u-btn-tips</em>类作基础准备。</p>
+				<p class="bs-info">普通状态不需要添加其他类，字体图标依照情况来另外设置颜色等</p>
+				<p class="demo">
+					<a href="javascript:;" role="button" class="u-btn-tips"><i class="vipFont if-add"></i>添加品牌</a>
+					<a href="javascript:;" role="button" class="u-btn-tips"><i class="vipFont if-close"></i>取消添加</a>
+					<a href="javascript:;" role="button" class="u-btn-tips">品牌介绍<i class="vipFont if-movie"></i></a>
+				</p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-tips"&gt;&lt;i class="vipFont if-add"&gt;&lt;/i&gt;添加品牌&lt;/a&gt;<br>&lt;a href="javascript:;" role="button" class="u-btn-tips"&gt;&lt;i class="vipFont if-close"&gt;&lt;/i&gt;取消添加&lt;/a&gt;<br>&lt;a href="javascript:;" role="button" class="u-btn-tips"&gt;品牌介绍&lt;i class="vipFont if-movie"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+				<p class="bs-info">小型状态添加<em>.u-btn-tips1</em>，字体图标依照情况来另外设置颜色等</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-tips u-btn-tips1"><i class="vipFont if-heart"></i>我喜欢</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-tips u-btn-tips1"&gt;&lt;i class="vipFont if-heart"&gt;&lt;/i&gt;我喜欢&lt;/a&gt;</p>
+				<p class="bs-info">已点击状态要在前者基础上增加<em>.u-btn-active</em>类</p>
+				<p class="demo"><a href="javascript:;" role="button" class="u-btn-tips u-btn-active"><i class="vipFont if-tick"></i>已添加</a><a href="javascript:;" role="button" class="u-btn-tips u-btn-active"><i class="vipFont if-close"></i>已取消</a><a href="javascript:;" role="button" class="u-btn-tips u-btn-tips1 u-btn-active"><i class="vipFont if-heart"></i>已喜欢</a></p>
+				<p class="code">&lt;a href="javascript:;" role="button" class="u-btn-tips u-btn-active"&gt;&lt;i class="vipFont if-tick"&gt;&lt;/i&gt;已添加&lt;/a&gt;<br>&lt;a href="javascript:;" role="button" class="u-btn-tips u-btn-active"&gt;&lt;i class="vipFont if-close"&gt;&lt;/i&gt;已取消&lt;/a&gt;<br>&lt;a href="javascript:;" role="button" class="u-btn-tips u-btn-tips1 u-btn-active"&gt;&lt;i class="vipFont if-heart"&gt;&lt;/i&gt;已喜欢&lt;/a&gt;</p>
+			</section>
+			<section class="m-box" id="tips">
+				<h3 class="u-type">Tips</h3>
+				<p class="bs-tips">非常驻页面模块提示，用于一次性或者可忽略（不影响操作）告知提示，分为两种交互方式：<br>1、常驻页面，除非用户主动关闭，提示消失<br>2、用户首次进入页面提示，用户主动关闭或者二次进入，提示消失。<br>必要引入<em>.m-tips-big</em>类，然后根据不同的情况使用相对应的类。</p>
+				<p class="bs-info">常规错误提示，引入<em>.m-tips1</em>类</p>
+				<div class="m-tips-big m-tips1">
+					<i class="vipFont if-sigh"></i>
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<h4 class="title">警告</h4>
+					<p class="info">提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-big m-tips1"&gt;
+						&lt;i class="vipFont if-sigh"&gt;&lt;/i&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;h4 class="title"&gt;警告&lt;/h4&gt;
+						&lt;p class="info"&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-info">信息提示，引入<em>.m-tips2</em>类</p>
+				<div class="m-tips-big m-tips2">
+					<i class="vipFont if-info"></i>
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<h4 class="title">通知</h4>
+					<p class="info">提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-big m-tips2"&gt;
+						&lt;i class="vipFont if-info"&gt;&lt;/i&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;h4 class="title"&gt;通知&lt;/h4&gt;
+						&lt;p class="info"&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-info">成功提示，引入<em>.m-tips3</em>类</p>
+				<div class="m-tips-big m-tips3">
+					<i class="vipFont if-sucess"></i>
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<h4 class="title">警告</h4>
+					<p class="info">提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-big m-tips3"&gt;
+						&lt;i class="vipFont if-sucess"&gt;&lt;/i&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;h4 class="title"&gt;警告&lt;/h4&gt;
+						&lt;p class="info"&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-info">严重错误提示，引入<em>.m-tips4</em>类</p>
+				<div class="m-tips-big m-tips4">
+					<i class="vipFont if-wrong"></i>
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<h4 class="title">警告</h4>
+					<p class="info">提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-big m-tips4"&gt;
+						&lt;i class="vipFont if-wrong"&gt;&lt;/i&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;h4 class="title"&gt;警告&lt;/h4&gt;
+						&lt;p class="info"&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-tips">驻页面模块提示，用于长时间告知提示，影响用户操作的提示<br>必要引入<em>.m-tips-nor</em>类，然后根据不同的情况使用相对应的类。</p>
+				<p class="bs-info">常规错误提示，引入<em>.m-tips1</em>类</p>
+				<div class="m-tips-nor m-tips1">
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<p class="info"><i class="vipFont if-sigh"></i>提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-nor m-tips1"&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;p class="info"&gt;&lt;i class="vipFont if-sigh"&gt;&lt;/i&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-info">信息提示，引入<em>.m-tips2</em>类</p>
+				<div class="m-tips-nor m-tips2">
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<p class="info"><i class="vipFont if-info"></i>提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-nor m-tips2"&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;p class="info"&gt;&lt;i class="vipFont if-info"&gt;&lt;/i&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-info">成功提示，引入<em>.m-tips3</em>类</p>
+				<div class="m-tips-nor m-tips3">
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<p class="info"><i class="vipFont if-sucess"></i>提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-nor m-tips3"&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;p class="info"&gt;&lt;i class="vipFont if-sucess"&gt;&lt;/i&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-info">严重错误提示，引入<em>.m-tips4</em>类</p>
+				<div class="m-tips-nor m-tips4">
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<p class="info"><i class="vipFont if-wrong"></i>提示文字</p>
+				</div>
+				<p class="code">
+					&lt;div class="m-tips-nor m-tips4"&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;p class="info"&gt;&lt;i class="vipFont if-wrong"&gt;&lt;/i&gt;提示文字&lt;/p&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-tips">气泡提示模块，引入<em>.m-tips-pop</em>类</p>
+				<p class="bs-info">常驻提示，气泡方向根据页面位置而定（没有关闭按钮）</p>
+				<div class="m-tips-pop">
+					<i class="arrow"></i>
+					<i class="arrow1"></i>
+					<div class="cnt"></div>
+				</div>
+				<br><br><br><br>
+				<p class="code">
+					&lt;div class="m-tips-pop"&gt;
+						&lt;i class="arrow"&gt;&lt;/i&gt;
+						&lt;i class="arrow1"&gt;&lt;/i&gt;
+						&lt;div class="cnt"&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				</p>
+				<p class="bs-info">非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮），与上面基本无异，只是增加关闭标签</p>
+				<div class="m-tips-pop">
+					<i class="arrow"></i>
+					<i class="arrow1"></i>
+					<a href="javascript:;" role="button" class="vipFont if-close"></a>
+					<div class="cnt"></div>
+				</div>
+				<br><br><br><br>
+				<p class="code">
+					&lt;div class="m-tips-pop"&gt;
+						&lt;i class="arrow"&gt;&lt;/i&gt;
+						&lt;i class="arrow1"&gt;&lt;/i&gt;
+						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&lt;/a&gt;
+						&lt;div class="cnt"&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				</p>
+			</section>
+		</article>
+		<nav class="g-side-nav">
+			<h2 class="title">You can see:</h2>
+			<ul class="m-list">
+				<li><a href="#button">按钮 Buttons</a></li>
+				<li><a href="#tips">提示 Tips</a></li>
+			</ul>
+		</nav>
+
+		<div class="m-tips-pop" id="colorSelect">
+			<i class="arrow"></i>
+			<i class="arrow1"></i>
+			<a href="javascript:;" role="button" class="vipFont if-close"></a>
+			<div class="cnt">
+				<p>请选择颜色：<input type="color" id="selectColor1"><a href="javascript:;" role="button" class="u-btn-mini u-btn2" id="change1">确定</a></p>
+				<p>或输入颜色值：<input type="text" id="selectColor2"><a href="javascript:;" role="button" class="u-btn-mini u-btn2" id="change2">确定</a></p>
+			</div>
+		</div>
+		<script>
+			$(function  () {
+				var whichFont,
+					selectPop=$("#colorSelect");
+				$('.m-tips-nor,.m-tips-big,.m-tips-pop:not(#colorSelect)').on('click', function(event) {
+					var x=event.pageX,
+						y=event.pageY,
+						w=$(window).width();
+					selectPop.fadeIn().css({left:x+304>=w?w-304:x-55,top:y-100});
+					whichFont=$(this);
+				});
+
+				$("#colorSelect .vipFont").on('click', function(event) {
+					selectPop.fadeOut();
+				});
+
+				$("#change1").on('click', function(event) {
+					whichFont.css({backgroundColor:$("#selectColor1").val()});
+				});
+
+				$("#change2").on('click', function(event) {
+					whichFont.css({backgroundColor:$("#selectColor2").val()});
+				});
+			})
+		</script>
+</body>
+</html>

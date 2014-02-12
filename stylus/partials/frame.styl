@@ -1,0 +1,129 @@
+// @use : vip bootstrap frame
+// @editor : mss.huang
+// @last modified time : 2014.1.15
+// @verson : 0.2
+
+::selection{
+	background: #ff5f3e;
+	color:#fff;
+}
+
+::-moz-selection{
+	background: #ff5f3e;
+	color:#fff;
+}
+
+body{
+	font: 14px/1.8 "microsoft yahei",tahoma,"SimSun",arial;
+	background: #fff;
+	background:-webkit-linear-gradient(top,#fff,#f1efef);
+	background:linear-gradient(top,#fff,#f1efef);
+	color:#555;
+}
+
+a {
+	background-color: transparent;
+}
+
+@media (max-width: 768px) {
+	body{font-size: 12px;}
+}
+
+.g-main{
+	padding: 100px 5% 100px 20%;
+}
+
+.m-head{
+	margin-bottom: 2em;
+
+	.title{
+		text-align: center;
+		margin-bottom: .5em;
+		font-size: 2.5em;
+		color: rgb(236,0,140);
+	}
+
+	.editor{
+		text-align: right;
+		margin-bottom: 2em;
+		font-size: 1.5em;
+	}
+}
+
+.m-box{
+	position: relative;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5%;
+	margin: 2.5% 0;
+	background: #f0f0f0;
+
+	em {
+		color: #d14;
+	}
+
+	.bs-info {
+		margin-top: 2em;
+	}
+
+	.bs-tips {
+		color: #424141;
+		font-size: 16px;
+		padding-left: 0;
+		padding-top: 2em;
+	}
+
+	.demo {
+		
+		margin: 10px 0;
+
+		a {
+			margin-right: 15px;
+		}
+	}
+
+	.code {
+		padding: 2em;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		color: teal;
+		border-radius: 5px;
+		white-space: pre;
+		margin: 10px 0;
+	}
+}
+
+.g-side-nav{
+	position: fixed;
+	top:100px;
+	left:5%;
+	width:10%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background:-webkit-linear-gradient(left top,#fff,#f0f0f0);
+	background:linear-gradient(left top,#fff,#f0f0f0);
+	padding: 10px;
+	box-sizing: border-box;
+
+	.title {
+		font-size: 1.2em;
+	}
+}
+
+.u-type {
+	position: absolute;
+	left: -1px;
+	top: -1px;
+	border: 1px solid rgb(244,53,155);
+	border-radius: 5px;
+	background-color:rgb(244,53,155);
+	color: #fff;
+	padding: 0 2em;
+	line-height: 2em;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.m-list {
+	padding-left: 2em;
+}
