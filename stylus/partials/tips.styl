@@ -5,7 +5,7 @@
 
 
 // 大提示框
-.m-tips-big {
+.ui-tips-big {
 	position: relative;
 	padding: 19px 0 19px 98px;
 	border-radius: 2px;
@@ -43,7 +43,7 @@
 }
 
 // 常规型提示框
-.m-tips-nor {
+.ui-tips-nor {
 	position: relative;
 	padding-left: 15px;
 	line-height: 40px;
@@ -56,8 +56,8 @@
 	}
 
 	i {
-		vertical-align: -2px;
 		margin-right: 13px;
+		vertical-align: -2px;
 	}
 
 	.if-close {
@@ -71,7 +71,7 @@
 }
 
 // 常规错误提示框
-.m-tips1 {
+.ui-tips1 {
 	background-color: #fffbf3;
 	border: 1px solid #f8dcb0;
 }
@@ -81,7 +81,7 @@
 }
 
 // 信息提示框
-.m-tips2 {
+.ui-tips2 {
 	background-color: #dff1f8;
 	border: 1px solid #b4e1f3;
 }
@@ -91,7 +91,7 @@
 }
 
 // 成功提示框
-.m-tips3 {
+.ui-tips3 {
 	background-color: #dff2d9;
 	border: 1px solid #c1e0af;
 }
@@ -101,7 +101,7 @@
 }
 
 // 严重错误提示框
-.m-tips4 {
+.ui-tips4 {
 	background-color: #f4e5e5;
 	border: 1px solid #ebced0;
 }
@@ -110,36 +110,94 @@
 	color: #f64a4a;
 }
 
+// 小箭头合成
+$bottom-arrow {
+	border-style: solid dashed dashed;
+	left: 50%;
+	margin-left: -6px;
+}
+
+$top-arrow {
+	border-style: dashed dashed solid;
+	left: 50%;
+	margin-left: -6px;
+}
+
+$left-arrow {
+	border-style: dashed solid dashed dashed;
+	top: 50%;
+	margin-top: -6px;
+}
+
+$right-arrow {
+	border-style: dashed dashed dashed solid;
+	top: 50%;
+	margin-top: -6px;
+}
 
 // 气泡提示模块
-.m-tips-pop {
+.ui-tips-pop {
 	position:absolute;
-	width: 302px;
 	background-color: #fffaf3;
 	border-width: 1px;
 	border-color: #f9dfba #f8dbb1 #f7deb9;
 	border-style: solid;
 	border-radius: 2px;
 
-	.arrow,.arrow1 {
+	.arrow {
 		position: absolute;
-		border-width: 6px 5px;
-		border-style: solid dashed dashed;
+		border-width: 6px;
 		font-size: 0;
 		height: 0;
 		overflow: hidden;
 	}
 
-	.arrow {
+	.bottom {
+		@extend $bottom-arrow;
 		border-color: #f7deb9 transparent transparent;
-		left: 50px;
 		bottom: -12px;
 	}
 
-	.arrow1 {
+	.bottom1 {
+		@extend $bottom-arrow;
 		border-color: #fffaf3 transparent transparent;
-		left: 50px;
 		bottom: -11px;
+	}
+
+	.top {
+		@extend $top-arrow;
+		border-color: transparent transparent #f7deb9;
+		top: -12px;
+	}
+
+	.top1 {
+		@extend $top-arrow;
+		border-color: transparent transparent #fffaf3;
+		top: -11px;
+	}
+
+	.left {
+		@extend $left-arrow;
+		border-color: transparent #f7deb9 transparent transparent;
+		left: -12px;
+	}
+
+	.left1 {
+		@extend $left-arrow;
+		border-color: transparent #fffaf3 transparent transparent;
+		left: -11px;
+	}
+
+	.right {
+		@extend $right-arrow;
+		border-color: transparent transparent transparent #f7deb9;
+		right: -12px;
+	}
+
+	.right1 {
+		@extend $right-arrow;
+		border-color: transparent transparent transparent #fffaf3;
+		right: -11px;
 	}
 
 	.if-close {
@@ -152,7 +210,7 @@
 	}
 
 	.cnt {
-		padding: 15px;
+		padding: 10px;
 	}
 }
 
@@ -163,7 +221,7 @@
 		font-size: 12px;
 		-webkit-transform: scale(.67);
 	}
-	.m-tips-big {
+	.ui-tips-big {
 		.if-close {
 			top: -6px;
 			padding: 15px;
@@ -171,7 +229,7 @@
 		}
 	}
 
-	.m-tips-nor {
+	.ui-tips-nor {
 		.if-close {
 			top: 0;
 			padding: 15px;
@@ -179,7 +237,7 @@
 		}
 	}
 
-	.m-tips-pop {
+	.ui-tips-pop {
 		.if-close {
 			top: -5px;
 			padding: 12px;
