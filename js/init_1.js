@@ -3,17 +3,17 @@ var config={
 	//左侧初始化参数
 	left:{
 		name:new Array("图标",new Array("基础控件","按钮","输入框","翻页","下拉菜单","数量控件","单选控件","复选控件"),"提示","表单","窗口","UI元素"),
-		link:new Array("index-icon-font.html",new Array("index-btn.html","index-btn.html","index-input.html","index-page.html","index-menu.html","index-radio-count.html","index-radio.html","index-check.html"),"index-tips.html","index-form.html","index-window.html","index-ui.html")
+		link:new Array("index.html",new Array("index-btn.html","index-btn.html","index-input.html","index-page.html","index-menu.html","index-radio-count.html","index-radio.html","index-check.html"),"index-tips.html","index-form.html","index-window.html","index-ui.html")
 	},
 	//头部初始化参数
 	top:{
 		name:new Array("组件库","频道规范","运营规范","帮助"),
-		link:new Array("index-icon-font.html","channel_name.html","operation_edm.html","#")
+		link:new Array("index.html","channel_name.html","operation_edm.html","#")
 	},
 	//底部初始化参数
 	bot:{
 		name:new Array("组件库","规范","关于我们","帮助"),
-		link:new Array("index-icon-font.html","channel_name.html","#","#")
+		link:new Array("index.html","channel_name.html","#","#")
 	}
 	
 }
