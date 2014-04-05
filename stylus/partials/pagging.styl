@@ -1,0 +1,72 @@
+// @use : vip bootstrap pagging
+// @editor : mss.huang
+// @last modified time : 2014.3.14
+// @verson : 0.1
+
+// 完整分页
+.ui-pagging {
+	text-align: center;
+	font: 12px/24px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
+	
+	.total {
+		font-size: 14px;
+		line-height: 26px;
+		color: #424141;
+		margin-right: 6px;
+	}
+
+	.arrow {
+		display: inline-block;
+		font: 18px/22px arial;
+		vertical-align: top;
+	}
+
+	a {
+		display: inline-block;
+		width: 24px;
+		border: 1px solid #b8b8b8;
+		background-color: #fff;
+		margin: 0 1px;
+		border-radius: 2px;
+		color: #848585;
+		transition: all .3s linear;
+
+		&:hover {
+			color: #e25996;
+			background-color: #fef9fb;
+			border-color: #f995c5;
+		}
+
+		&.curr,&:active {
+			background-color: #de3083;
+			color: #fff;
+			border-color: #cd2a78;
+		}
+	}
+}
+
+// 简版分页
+.ui-pagging-mini {
+	.total {
+		font-size: 12px;
+
+		em {
+			color: #e0468d;
+		}
+	}
+
+	.next {
+		width: 66px;
+
+		.arrow {
+			margin-left: 6px;
+		}
+	}
+
+	.disable,.disable:hover,.disable:active {
+		color: #9e9d9d;
+		background-color: #d2d1d1;
+		border-color: #b8b8b8;
+		cursor: not-allowed;
+	}
+}

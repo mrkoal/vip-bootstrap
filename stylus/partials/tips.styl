@@ -1,44 +1,51 @@
 // @use : vip bootstrap tips
 // @editor : mss.huang
-// @last modified time : 2014.1.15
-// @verson : 0.1
+// @last modified time : 2014.3.14
+// @verson : 0.8
 
+// 关闭小按钮模块
+$btn-close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 3px 6px;
+	font: 14px/1 arial;
+
+	&,&:hover {
+		color: #a6a5a5;
+		text-decoration: none;
+	}
+}
 
 // 大提示框
 .ui-tips-big {
 	position: relative;
-	padding: 19px 0 19px 98px;
+	padding: 4px 0 4px 40px;
 	border-radius: 2px;
 	zoom: 1;
 	font-family: s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
 
 	.title {
-		line-height: 38px;
-		font-size: 18px;
-		color: #41413c;
+		line-height: 24px;
+		font-size: 16px;
+		color: #424141;
 		font-weight: normal;
 	}
 
 	.info {
-		line-height: 24px;
-		font-size: 14px;
-		color: #a6a4a2;
+		line-height: 20px;
+		font-size: 12px;
+		color: #2a2a2a;
 	}
 
 	i {
 		position:absolute;
-		left: 28px;
-		top: 25px;
-		font-size: 50px;
+		left: 14px;
+		top: 9px;
 	}
 
-	.if-close {
-		position: absolute;
-		right: 0;
-		top: 0;
-		padding: 10px;
-		font-size: 8px;
-		color: #a6a5a5;
+	.close {
+		@extends $btn-close;
 	}
 }
 
@@ -46,13 +53,13 @@
 .ui-tips-nor {
 	position: relative;
 	padding-left: 15px;
-	line-height: 40px;
+	line-height: 30px;
 	border-radius: 2px;
 	zoom: 1;
 	font-family: s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
 	.info {
 		font-size: 14px;
-		color: #a6a4a2;
+		color: #2a2a2a;
 	}
 
 	i {
@@ -60,13 +67,8 @@
 		vertical-align: -2px;
 	}
 
-	.if-close {
-		position: absolute;
-		right: 0;
-		top: 6px;
-		padding: 10px;
-		font-size: 8px;
-		color: #a6a5a5;
+	.close {
+		@extends $btn-close;
 	}
 }
 
@@ -110,138 +112,165 @@
 	color: #f64a4a;
 }
 
+// 二次确认
+.if-query {
+	color: #2689f8;
+}
+
+// 提示图标size
+.if-size-30 {
+	font-size: 30px;
+}
+
+.if-size-48 {
+	font-size: 48px;
+}
+
+
+// 气泡提示模块
+
+// 字符兼容
+arrowPos = -8px;
+
 // 小箭头合成
 $bottom-arrow {
-	border-style: solid dashed dashed;
 	left: 50%;
-	margin-left: -6px;
+	margin-left: arrowPos+1;
 }
 
 $top-arrow {
-	border-style: dashed dashed solid;
 	left: 50%;
-	margin-left: -6px;
+	margin-left: arrowPos+1;
 }
 
 $left-arrow {
-	border-style: dashed solid dashed dashed;
 	top: 50%;
-	margin-top: -6px;
+	margin-top: arrowPos+1;
 }
 
 $right-arrow {
-	border-style: dashed dashed dashed solid;
 	top: 50%;
-	margin-top: -6px;
+	margin-top: arrowPos+1;
 }
 
-// 气泡提示模块
 .ui-tips-pop {
 	position:absolute;
 	background-color: #fffaf3;
 	border-width: 1px;
-	border-color: #f9dfba #f8dbb1 #f7deb9;
+	border-color: #f9dfba #f8dbb1 #f9e0bb;
 	border-style: solid;
 	border-radius: 2px;
+	font: 12px/1.4 s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
 
 	.arrow {
 		position: absolute;
-		border-width: 6px;
-		font-size: 0;
-		height: 0;
-		overflow: hidden;
+		height: 14px;
+		*overflow: hidden;
+		font: normal 14px/14px s('\5B8B\4F53 Hiragino Sans GB');
+		font-size: s('25px\9');
+		_line-height: 18px;
 	}
 
 	.bottom {
 		@extend $bottom-arrow;
-		border-color: #f7deb9 transparent transparent;
-		bottom: -12px;
+		color: #f9e0bb;
+		bottom: arrowPos;
+		
 	}
 
 	.bottom1 {
 		@extend $bottom-arrow;
-		border-color: #fffaf3 transparent transparent;
-		bottom: -11px;
+		color: #fffaf3;
+		bottom: arrowPos+2;
 	}
 
 	.top {
 		@extend $top-arrow;
-		border-color: transparent transparent #f7deb9;
-		top: -12px;
+		color: #f9dfba;
+		top: arrowPos;
 	}
 
 	.top1 {
 		@extend $top-arrow;
-		border-color: transparent transparent #fffaf3;
-		top: -11px;
+		color: #fffaf3;
+		top: arrowPos+2;
 	}
 
 	.left {
 		@extend $left-arrow;
-		border-color: transparent #f7deb9 transparent transparent;
-		left: -12px;
+		color: #f8dbb1;
+		left: arrowPos;
 	}
 
 	.left1 {
 		@extend $left-arrow;
-		border-color: transparent #fffaf3 transparent transparent;
-		left: -11px;
+		color: #fffaf3;
+		left: arrowPos+2;
 	}
 
 	.right {
 		@extend $right-arrow;
-		border-color: transparent transparent transparent #f7deb9;
-		right: -12px;
+		color: #f8dbb1;
+		right: arrowPos;
 	}
 
 	.right1 {
 		@extend $right-arrow;
-		border-color: transparent transparent transparent #fffaf3;
-		right: -11px;
+		color: #fffaf3;
+		right: arrowPos+2;
 	}
 
-	.if-close {
-		position: absolute;
-		right: 0;
-		top: 0;
-		padding: 8px;
-		font-size: 8px;
-		color: #a6a5a5;
+	.close {
+		@extends $btn-close;
 	}
 
 	.cnt {
 		padding: 10px;
+		font-size: 12px;
+		color: #4d4d4d;
+	}
+
+	.cnt1 {
+		padding: 10px 30px 10px 10px;;
+		font-size: 12px;
+		color: #4d4d4d;
 	}
 }
 
-// webkit内核小于12px字需要用transform来解决
-@media screen and (-webkit-min-device-pixel-ratio:0){
-	$tips-close-btn {
-		right: -7px;
-		font-size: 12px;
-		-webkit-transform: scale(.67);
+// ie9以上按照高级浏览器走
+:root .ui-tips-pop {
+	.arrow {
+		font-size: 14px;
 	}
-	.ui-tips-big {
-		.if-close {
-			top: -6px;
-			padding: 15px;
-			@extend $tips-close-btn;
-		}
+}
+
+// 白色扩展
+.ui-tips-pop-1 {
+	background-color: #fff;
+	border-color: #d7d6d4;
+	box-shadow: 0 0 0 3px rgba(0,0,0,.04);
+
+	.top1,.right1,.bottom1,.left1 {
+		color: #fff;
 	}
 
-	.ui-tips-nor {
-		.if-close {
-			top: 0;
-			padding: 15px;
-			@extend $tips-close-btn;
-		}
+	.top,.right,.bottom,.left {
+		color: #d7d6d4;
 	}
 
-	.ui-tips-pop {
-		.if-close {
-			top: -5px;
-			padding: 12px;
-			@extend $tips-close-btn;
-		}
+	.left {
+		text-shadow: -3px 0 rgba(0,0,0,.04);
+	}
+
+	.right {
+		text-shadow: 3px 0 rgba(0,0,0,.04);
+	}
+
+	.top {
+		text-shadow:0 -3px rgba(0,0,0,.04);
+	}
+
+	.bottom {
+		text-shadow:0 3px rgba(0,0,0,.04);
 	}
 }

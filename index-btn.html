@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vip.com GUI Guide</title>
+
+
+<link href="css/for-show.css" rel="stylesheet" type="text/css">
+<link href="css/docs.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/prettify.js"></script>
+<style>.prettyprint{background:white;font-family:Menlo,'Bitstream Vera Sans Mono','DejaVu Sans Mono',Monaco,Consolas,monospace;font-size:12px;line-height:1.5;padding:10px;}.pln{color:#333333;}@media screen{.str{color:#dd1144;}.kwd{color:#333333;}.com{color:#999988;}.typ{color:#445588;}.lit{color:#445588;}.pun{color:#333333;}.opn{color:#333333;}.clo{color:#333333;}.tag{color:navy;}.atn{color:teal;}.atv{color:#dd1144;}.dec{color:#333333;}.var{color:teal;}.fun{color:#990000;}}@media print,projection{.str{color:#006600;}.kwd{color:#006;font-weight:bold;}.com{color:#600;font-style:italic;}.typ{color:#404;font-weight:bold;}.lit{color:#004444;}.pun,.opn,.clo{color:#444400;}.tag{color:#006;font-weight:bold;}.atn{color:#440044;}.atv{color:#006600;}}ol.linenums{margin-top:0;margin-bottom:0;}li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{}li.L1,li.L3,li.L5,li.L7,li.L9{}
+</style>
+</head>
+
+<body>
+<div class="header">
+<div class="docs">
+<div class="docs-in re" >
+<div class="navbar-header" style="position:absolute;left:-220px;top:0px">
+	<a href="javascript:void(0)" class="navbar-brand"><img src="images/logo.png" border='0' /></a>
+</div>
+<div class="nav">
+
+  <ul class="navbar-nav">
+	<li  class="active" onClick="window.location='index3.html'">
+	  <a href="javascript:void(0)">组件库</a>
+	</li>
+	<li>
+	  <a href="javascript:void(0)">频道规范</a>
+	</li>
+	<li onClick="window.location='index4.html'">
+	  <a href="javascript:void(0)">运营规范</a>
+	</li>
+	<li>
+	  <a href="javascript:void(0)">帮助</a>
+	</li>
+	
+  </ul>
+</div>
+</div>
+</div>
+
+</div>
+<div class="docs">
+<div class="docs-in re">
+	
+	<div class="col-nav">
+		
+		<ul id="left-nav" class="bs-sidenav">
+		
+		</ul>
+	</div>
+	
+	<div class="col-list">
+	<div class="page-header"></div>
+	<div class="col-detail">
+		<h2 id="t1">Warning for F2E</h2>
+		<p>1、这是有关于vip整站的ui规范，引用的时候注意<em>严禁修改原样式</em>，只能采取额外增加class或者通过父元素来覆盖、新增属性。</p>
+		<p>2、本规范采取的是类nec的命名法，各位注意命名的时候别把类似.title,.info,.tips,.arrow等当作名字单独赋予样式，这些名字都是原本无意义的，因为他只在当前模块或元件中生效，同样的样式名可以在不同的模块或元件中重复使用，互不干扰。</p>
+		<p>3、为了提高灵活性和减少苦逼程度，以后会逐渐地增加font-face的方式来代替现在的图片icon，相关的注意情况后续会有Wiki说明，请注意。</p>
+	</div>
+	<h2>按钮<a class="down" href="#">下载PSD</a></h2>
+	
+	<div  class="col-son" data-to="t1_1">
+		<a href="javascript:void(0)" data-to="t1_1_1">• 通用规则</a>
+		<a href="javascript:void(0)" data-to="t1_1_2">• 代码引入</a>
+		<a href="javascript:void(0)" data-to="t1_1_3">• 加强操作按钮</a>
+		<a href="javascript:void(0)" data-to="t1_1_4">• 操作按钮</a>
+		<a href="javascript:void(0)" data-to="t1_1_5">• 次级操作按钮</a>
+		<a href="javascript:void(0)" data-to="t1_1_6">• 非常驻按钮</a>
+	</div>
+	<div class="col-detail">
+		<h3 id="t1_1_1">通用规则</h3>
+
+		<p>如果点击按钮不会立即响应，应当显示加载状态，此时按钮不可点击</p>
+		<p>如果同样的按钮出现在多个窗口中，试着使用相同的标签文本、按钮及位置</p>
+		<p>标签文本长度不宜超过五个中文字</p>
+		<p>两个以上的按钮同时出现时，需包含一个默认按钮（即操作按钮） </p>
+		<p>图形标签辅助文本标签，传达按钮的操作意义，不建议轻易使用</p>
+
+	</div>
+	<div class="col-detail">
+		<h3 id="t1_1_2">代码引入</h3>
+
+		<p>大、中、小按钮，分别先引入<em>.ui-btn-big</em>  <em>.ui-btn-nor</em>  <em>.ui-btn-mini</em> 类</p>
+		<p>四种按钮状态，加强操作引入<em>.ui-btn1</em>，强操作引入<em>.ui-btn2</em>，弱操作引入<em>.ui-btn3</em> ，不可点击引入<em>.ui-btn-disable</em> 类</p>
+		<p>非常驻类按钮引入<em>.ui-btn-tips</em>类，需要小型按钮时再添加<em>.ui-btn-tips1</em>即可，已点击按钮添加<em>.ui-btn-active</em></p>
+		<p><em>*</em>特别注明loading按钮为了垂直居中的实现，文字方面要使用<em>&lt;span class="ui-btn-txt"&gt;&lt;/span&gt;</em> 包裹</p>
+
+	</div>
+	<div class="bs-example">
+		<h3 id="t1_1_3">加强操作按钮</h3>
+		<div class="col-detail col-pad">
+		
+		<p>加强操作按钮，适用于购物袋、登录、支付、注册等，可以单独使用或者和次级操作按钮配合使用。</p>
+
+		</div>
+		<div class="bs-status btn-toolbar">
+			<a href="javascript:;" role="button" class="ui-btn-big ui-btn1">
+				<i class="vipFont if-shopping-bag">&#xe604;</i>放入购物袋
+			</a>
+			<a href="javascript:;" role="button" class="ui-btn-big ui-btn-disable">
+				<i class="ii-loading"></i><span class="ui-btn-txt">处理中...</span>
+			</a>
+			<a href="javascript:;" role="button" class="ui-btn-big ui-btn-disable">
+				<i class="vipFont if-shopping-bag">&#xe604;</i>放入购物袋
+			</a>
+			<br><br>
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn1">
+				<i class="vipFont if-shopping-bag">&#xe604;</i>放入购物袋
+			</a>
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">
+				<i class="ii-loading"></i><span class="ui-btn-txt">处理中...</span>
+			</a>
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">
+				<i class="vipFont if-shopping-bag">&#xe604;</i>放入购物袋
+			</a>
+			
+			<div class="codes" >
+				<div class="highlight">
+					<pre>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-big ui-btn1"&gt;
+	&lt;i class="vipFont if-shopping-bag"&gt;&amp;#xe604;&lt;/i&gt;放入购物袋
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-big ui-btn-disable"&gt;
+	&lt;i class="ii-loading"&gt;&lt;/i&gt;&lt;span class="ui-btn-txt"&gt;处理中...&lt;/span&gt;
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-big ui-btn-disable"&gt;
+	&lt;i class="vipFont if-shopping-bag"&gt;&amp;#xe604;&lt;/i&gt;放入购物袋
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn1"&gt;
+	&lt;i class="vipFont if-shopping-bag"&gt;&amp;#xe604;&lt;/i&gt;放入购物袋
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;
+	&lt;i class="ii-loading"&gt;&lt;/i&gt;&lt;span class="ui-btn-txt"&gt;处理中...&lt;/span&gt;
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;
+	&lt;i class="vipFont if-shopping-bag"&gt;&amp;#xe604;&lt;/i&gt;放入购物袋
+&lt;/a&gt;</code>
+					</pre>
+				</div>
+			</div>
+			<div class="status-all">
+				<h4 class="status-sub-title">交互状态和标注</h4>
+				<img src="images/pic/btn-1.jpg" alt="">
+			</div>
+		</div>
+		
+		
+		<h3 id="t1_1_4">强操作按钮</h3>
+		<div class="col-detail col-pad">
+		
+			<p>适用范围：强操作按钮 ，可以单独使用或者和次级弱按钮配合使用。</p>
+	
+			</div>
+		<div class="bs-status btn-toolbar">
+			
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn2">保存收货信息</a>
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">
+				<i class="ii-loading"></i><span class="ui-btn-txt">处理中...</span>
+			</a>
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">保存收货信息</a>
+	
+			<br><br>
+			<a href="javascript:;" role="button" class="ui-btn-mini ui-btn2">使用</a>
+			<a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable">
+				<i class="ii-loading"></i>
+			</a>
+			<a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable">使用</a>
+			
+			<div class="codes">
+				<div class="highlight">
+					<pre>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn2"&gt;保存收货信息&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;
+	&lt;i class="ii-loading"&gt;&lt;/i&gt;&lt;span class="ui-btn-txt"&gt;处理中...&lt;/span&gt;
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;保存收货信息&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-mini ui-btn2"&gt;使用&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable"&gt;
+	&lt;i class="ii-loading"&gt;&lt;/i&gt;
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable"&gt;使用&lt;/a&gt;</code>
+					</pre>
+				</div>
+			</div>
+			<div class="status-all">
+			<h4 class="status-sub-title">交互状态和标注</h4>
+			<img src="images/pic/btn-2.jpg" alt="">
+		</div>
+		</div>
+		<h3 id="t1_1_5">弱按钮</h3>
+		<div class="col-detail col-pad">
+		
+			<p>次级操作按钮，一般和操作按钮配合使用，或者单独使用；配合使用时用于消极或次要操作。</p>
+	
+			</div>
+		<div class="bs-status btn-toolbar">
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn3">取消</a>
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">取消</a>
+			<a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">
+				<i class="ii-loading"></i>
+			</a>
+			<br><br>
+			<a href="javascript:;" role="button" class="ui-btn-mini ui-btn3">取消</a>
+			<a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable">取消</a>
+			<a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable">
+				<i class="ii-loading"></i>
+			</a>
+			<div class="codes">
+			
+				<div class="highlight">
+					<pre>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn3"&gt;取消&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;取消&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;
+	&lt;i class="ii-loading"&gt;&lt;/i&gt;
+&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-mini ui-btn3"&gt;取消&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable"&gt;取消&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-mini ui-btn-disable"&gt;
+	&lt;i class="ii-loading"&gt;&lt;/i&gt;
+&lt;/a&gt;</code>
+					</pre>
+				</div>
+			</div>
+			<div class="status-all">
+				<h4 class="status-sub-title">交互状态和标注</h4>
+				<img src="images/pic/btn-3.jpg" alt="">
+			</div>
+		</div>
+		<h3 id="t1_1_6">非常驻按钮</h3>
+		<div class="col-detail col-pad">
+		
+			<p>非常驻按钮，默认隐藏，鼠标hover一定的有效区域时出现。</p>
+
+	
+			</div>
+		   <div class="bs-status btn-toolbar">
+			<a href="javascript:;" role="button" class="ui-btn-tips"><i class="vipFont if-add">&#xe60b;</i>添加品牌</a>
+			<a href="javascript:;" role="button" class="ui-btn-tips"><i class="vipFont if-close">&#xe609;</i>取消添加</a>
+			<a href="javascript:;" role="button" class="ui-btn-tips">品牌介绍<i class="vipFont if-movie">&#xe606;</i></a>
+			<a href="javascript:;" role="button" class="ui-btn-tips ui-btn-tips1"><i class="vipFont if-heart">&#xe608;</i>我喜欢</a>
+			<br><br>
+			<a href="javascript:;" role="button" class="ui-btn-tips ui-btn-active"><i class="vipFont if-tick">&#xe601;</i>已添加</a>
+			<a href="javascript:;" role="button" class="ui-btn-tips ui-btn-active"><i class="vipFont if-close">&#xe609;</i>已取消</a>
+			<a href="javascript:;" role="button" class="ui-btn-tips ui-btn-tips1 ui-btn-active"><i class="vipFont if-heart">&#xe608;</i>已喜欢</a>
+			
+			<div class="codes">
+				<div class="highlight">
+					<pre>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-tips"&gt;&lt;i class="vipFont if-add"&gt;&amp;#xe60b;&lt;/i&gt;添加品牌&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-tips"&gt;&lt;i class="vipFont if-close"&gt;&amp;#xe609;&lt;/i&gt;取消添加&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-tips"&gt;品牌介绍&lt;i class="vipFont if-movie"&gt;&amp;#xe606;&lt;/i&gt;&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-tips ui-btn-tips1"&gt;&lt;i class="vipFont if-heart"&gt;&amp;#xe608;&lt;/i&gt;我喜欢&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-tips ui-btn-active"&gt;&lt;i class="vipFont if-add"&gt;&amp;#xe60b;&lt;/i&gt;添加品牌&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-tips ui-btn-active"&gt;&lt;i class="vipFont if-close"&gt;&amp;#xe609;&lt;/i&gt;取消添加&lt;/a&gt;</code>
+<code class="prettyprint">&lt;a href="javascript:;" role="button" class="ui-btn-tips ui-btn-tips1 ui-btn-active"&gt;
+	&lt;i class="vipFont if-heart"&gt;&amp;#xe608;&lt;/i&gt;我喜欢
+&lt;/a&gt;</code>
+					</pre>
+				</div>
+			</div>
+			<div class="status-all">
+				<h4 class="status-sub-title">交互状态和标注</h4>
+				<img src="images/pic/btn-4.jpg" alt="">
+			</div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header footer ">
+<div class="docs">
+<span class="f-ui">唯品会UI设计规范平台</span>
+<div class="f-link"><a href="#" target="_blank">组件库</a>  |  <a  href="#" target="_blank">规范</a>  |  <a href="#">关于我们</a>  |  <a href="#">帮助</a></div>
+</div>
+
+</div>
+<script type="text/javascript" src="js/init_1.js"></script> 
+</body>
+</html>

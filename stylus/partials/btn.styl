@@ -1,20 +1,24 @@
 // @use : vip bootstrap button
 // @editor : mss.huang
-// @last modified time : 2014.1.15
-// @verson : 0.3
+// @last modified time : 2014.3.14
+// @verson : 0.5
 
 
+//按钮通用样式
+$btn-normal-style {
+	text-decoration: none;
+	vertical-align: top;
+}
 
 // 大按钮
 .ui-btn-big {
 	display: inline-block;
 	padding: 0 28px;
 	font: 18px/42px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
-	*line-height: 43px;
+	overflow hidden
 	height: 42px;
 	border-radius: 5px;
-	transition: all .5s ease-out;
-	-webkit-transition: all .5s ease-out; 
+	@extends $btn-normal-style;
 
 	i {
 		margin-right: 13px;
@@ -23,11 +27,13 @@
 	.if-shopping-bag {
 		font-size: 22px;
 		vertical-align: text-bottom;
+		_vertical-align: baseline;
 	}
 
 	.if-card {
 		font-size: 20px;
 		vertical-align: -2px;
+		_vertical-align: baseline;
 	}
 }
 
@@ -51,15 +57,20 @@
 .ui-btn-nor {
 	display: inline-block;
 	padding: 0 25px;
-	font: 12px/28px s('arial,\5B8B\4F53,sans-serif');
-	*line-height: 29px;
+	font: 12px/28px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
 	height: 28px;
 	border-radius: 4px;
-	transition: all .5s ease-out;
-	-webkit-transition: all .5s ease-out;
+	@extends $btn-normal-style;
 
-	i {
-		vertical-align: middle;
+	.vipFont {
+		font-size: 15px;
+		vertical-align: text-top;
+		_vertical-align: baseline;
+		margin-right: 7px;
+	}
+
+	.ui-btn-txt {
+		margin-left: 7px;
 	}
 }
 
@@ -67,12 +78,16 @@
 .ui-btn-mini {
 	display: inline-block;
 	padding: 0 10px;
-	font: 12px/18px s('arial,\5B8B\4F53,sans-serif');
+	font: 12px/18px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
 	*line-height: 19px;
 	height: 18px;
 	border-radius: 4px;
-	transition: all .5s ease-out;
-	-webkit-transition: all .5s ease-out;
+	@extends $btn-normal-style;
+
+	.ii-loading {
+		vertical-align: top;
+		margin-top: 1px;
+	}
 }
 
 // 提示功能类大按钮
@@ -86,6 +101,7 @@
 	color: #181818;
 	background: rgba(255,255,255,.8);
 	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ccffffff, endcolorstr=#ccffffff)');
+	@extends $btn-normal-style;
 
 	i {
 		margin-right: 5px;
@@ -248,19 +264,37 @@
 	}
 
 	.ii-loading {
-		background-image: url('../font/img/loading_1.gif');
+		background-image: url('{$fontDomain}/img/loading_1.gif');
 	}
 }
 
 // 按钮loading动画
 .ii-loading {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     vertical-align: middle;
-    background-image: url('../font/img/loading.gif');
+    background-image: url('{$fontDomain}/img/loading.gif');
    	background-repeat: no-repeat;
    	overflow: hidden;
+}
+
+// retina 兼容
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .ii-loading {
+  	background-image: url('{$fontDomain}/img/loading@2x.gif');
+  	background-size: 16px 16px;
+  }
+
+  .ui-btn-disable {
+  	.ii-loading {
+		background-image: url('{$fontDomain}/img/loading_1@2x.gif');
+		background-size: 16px 16px;
+	}
+  }
 }
 
 // 可以处理inline-block图片图标对文字产生的影响,和图片图标搭配，例如ii-loading
