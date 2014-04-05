@@ -306,7 +306,7 @@
 }
 
 .ui-btn-disable .ii-loading {
-  background-image: url("{$fontDomain}/img/loading_1.gif");
+  background-image: url("../font/img/loading_1.gif");
 }
 
 .ii-loading {
@@ -314,21 +314,21 @@
   height: 16px;
   display: inline-block;
   vertical-align: middle;
-  background-image: url("{$fontDomain}/img/loading.gif");
+  background-image: url("../font/img/loading.gif");
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),only screen and (-moz-min-device-pixel-ratio: 1.5),only screen and (-o-min-device-pixel-ratio: 3/2),only screen and (min-device-pixel-ratio: 1.5) {
   .ii-loading {
-    background-image: url("{$fontDomain}/img/loading@2x.gif");
+    background-image: url("../font/img/loading@2x.gif");
     -webkit-background-size: 16px 16px;
     -moz-background-size: 16px 16px;
     background-size: 16px 16px;
   }
 
   .ui-btn-disable .ii-loading {
-    background-image: url("{$fontDomain}/img/loading_1@2x.gif");
+    background-image: url("../font/img/loading_1@2x.gif");
     -webkit-background-size: 16px 16px;
     -moz-background-size: 16px 16px;
     background-size: 16px 16px;
