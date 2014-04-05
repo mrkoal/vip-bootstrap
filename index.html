@@ -28,6 +28,9 @@
 				<p>3、为了提高灵活性和减少苦逼程度，以后会逐渐地增加font-face的方式来代替现在的图片icon，相关的注意情况后续会有Wiki说明，请注意。</p>
 			</section>
 			<section class="m-box" id="button">
+				<a href="javascript:;" role="button" class="ui-btn-nor ui-btn1">
+	<i class="vipFont if-shopping-bag">&#xe604;</i>放入购物袋
+</a>
 				<h3 class="u-type">Buttons</h3>
 				<p class="bs-tips">1、大按钮，先引入<em>.ui-btn-big</em>类作基础准备，大按钮中的图标引入对应的字体图标，图标颜色默认继承，可单独设置颜色。</p>
 				<p class="bs-info">唯品红按钮在前者增加<em>.ui-btn1</em>类</p>
@@ -50,7 +53,7 @@
 				<p class="demo"><a href="javascript:;" role="button" class="ui-btn-nor ui-btn3">保存收货信息</a></p>
 				<p class="code">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn3"&gt;保存收货信息&lt;/a&gt;</p>
 				<p class="bs-info">不可点击按钮在前者增加<em>.ui-btn-disable</em>类</p>
-				<p class="demo"><a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">保存支付方式</a><a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">保存收货信息</a></p>
+				<p class="demo"><a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">保存支付方式</a><a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable">保存收货信息</a><a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"><i class="ii-loading"></i><span class="ui-btn-txt">处理中...</span></a></p>
 				<p class="code">&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;保存支付方式&lt;/a&gt;<br>&lt;a href="javascript:;" role="button" class="ui-btn-nor ui-btn-disable"&gt;保存收货信息&lt;/a&gt;</p>
 				<p class="bs-tips">3、小按钮，先引入<em>.ui-btn-mini</em>类作基础准备。</p>
 				<p class="bs-info">浅红按钮在前者基础上增加<em>.ui-btn2</em>类</p>
@@ -80,7 +83,7 @@
 				<p class="bs-info">常规错误提示，引入<em>.ui-tips1</em>类</p>
 				<div class="ui-tips-big ui-tips1">
 					<i class="vipFont if-sigh">&#xe603;</i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<h4 class="title">警告</h4>
 					<p class="info">提示文字</p>
 				</div>
@@ -95,7 +98,7 @@
 				<p class="bs-info">信息提示，引入<em>.ui-tips2</em>类</p>
 				<div class="ui-tips-big ui-tips2">
 					<i class="vipFont if-info">&#xe607;</i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<h4 class="title">通知</h4>
 					<p class="info">提示文字</p>
 				</div>
@@ -110,7 +113,7 @@
 				<p class="bs-info">成功提示，引入<em>.ui-tips3</em>类</p>
 				<div class="ui-tips-big ui-tips3">
 					<i class="vipFont if-sucess">&#xe602;</i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<h4 class="title">警告</h4>
 					<p class="info">提示文字</p>
 				</div>
@@ -125,7 +128,7 @@
 				<p class="bs-info">严重错误提示，引入<em>.ui-tips4</em>类</p>
 				<div class="ui-tips-big ui-tips4">
 					<i class="vipFont if-wrong">&#xe600;</i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<h4 class="title">警告</h4>
 					<p class="info">提示文字</p>
 				</div>
@@ -140,7 +143,7 @@
 				<p class="bs-tips">驻页面模块提示，用于长时间告知提示，影响用户操作的提示<br>必要引入<em>.ui-tips-nor</em>类，然后根据不同的情况使用相对应的类。</p>
 				<p class="bs-info">常规错误提示，引入<em>.ui-tips1</em>类</p>
 				<div class="ui-tips-nor ui-tips1">
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<p class="info"><i class="vipFont if-sigh">&#xe603;</i>提示文字</p>
 				</div>
 				<p class="code">
@@ -151,7 +154,7 @@
 				</p>
 				<p class="bs-info">信息提示，引入<em>.ui-tips2</em>类</p>
 				<div class="ui-tips-nor ui-tips2">
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<p class="info"><i class="vipFont if-info">&#xe607;</i>提示文字</p>
 				</div>
 				<p class="code">
@@ -162,7 +165,7 @@
 				</p>
 				<p class="bs-info">成功提示，引入<em>.ui-tips3</em>类</p>
 				<div class="ui-tips-nor ui-tips3">
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<p class="info"><i class="vipFont if-sucess">&#xe602;</i>提示文字</p>
 				</div>
 				<p class="code">
@@ -173,7 +176,7 @@
 				</p>
 				<p class="bs-info">严重错误提示，引入<em>.ui-tips4</em>类</p>
 				<div class="ui-tips-nor ui-tips4">
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
+					<a href="javascript:;" role="button" class="close">&times;</a>
 					<p class="info"><i class="vipFont if-wrong">&#xe600;</i>提示文字</p>
 				</div>
 				<p class="code">
@@ -185,75 +188,156 @@
 				<p class="bs-tips">气泡提示模块，引入<em>.ui-tips-pop</em>类</p>
 				<p class="bs-info">常驻提示，气泡方向根据页面位置而定（没有关闭按钮）</p>
 				<div class="ui-tips-pop">
-					<i class="arrow bottom"></i>
-					<i class="arrow bottom1"></i>
-					<div class="cnt"></div>
+					<i class="arrow top">&#9670;</i>
+					<i class="arrow top1">&#9670;</i>
+					<div class="cnt">常驻提示，气泡方向根据页面位置而定（没有关闭按钮）</div>
+				</div>
+				<br><br><br><br>
+				<div class="ui-tips-pop">
+					<i class="arrow right">&#9670;</i>
+					<i class="arrow right1">&#9670;</i>
+					<div class="cnt">常驻提示，气泡方向根据页面位置而定（没有关闭按钮）</div>
+				</div>
+				<br><br><br><br>
+				<div class="ui-tips-pop">
+					<i class="arrow bottom">&#9670;</i>
+					<i class="arrow bottom1">&#9670;</i>
+					<div class="cnt">常驻提示，气泡方向根据页面位置而定（没有关闭按钮）</div>
+				</div>
+				<br><br><br><br>
+				<div class="ui-tips-pop">
+					<i class="arrow left">&#9670;</i>
+					<i class="arrow left1">&#9670;</i>
+					<div class="cnt">常驻提示，气泡方向根据页面位置而定（没有关闭按钮）</div>
+				</div>
+				<br><br><br><br>
+				<div class="ui-tips-pop ui-tips-pop-1">
+					<i class="arrow left">&#9670;</i>
+					<i class="arrow left1">&#9670;</i>
+					<div class="cnt">常驻提示，气泡方向根据页面位置而定（没有关闭按钮）</div>
 				</div>
 				<br><br><br><br>
 				<p class="code">
 					&lt;div class="ui-tips-pop"&gt;
-						&lt;i class="arrow bottom"&gt;&lt;/i&gt;
-						&lt;i class="arrow bottom1"&gt;&lt;/i&gt;
-						&lt;div class="cnt"&gt;&lt;/div&gt;
+						&lt;i class="arrow bottom"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;i class="arrow bottom1"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;div class="cnt"&gt;常驻提示，气泡方向根据页面位置而定（没有关闭按钮）&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="ui-tips-pop ui-tips-pop-1"&gt;
+						&lt;i class="arrow left"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;i class="arrow left1"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;div class="cnt"&gt;常驻提示，气泡方向根据页面位置而定（没有关闭按钮）&lt;/div&gt;
 					&lt;/div&gt;
 				</p>
 				<p class="bs-info">非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮），与上面基本无异，只是增加关闭标签</p>
 				<div class="ui-tips-pop">
-					<i class="arrow top"></i>
-					<i class="arrow top1"></i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
-					<div class="cnt"></div>
+					<i class="arrow top">&#9670;</i>
+					<i class="arrow top1">&#9670;</i>
+					<a href="javascript:;" role="button" class="close">&times;</a>
+					<div class="cnt1">非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）</div>
 				</div>
 				<br><br><br><br>
 				<div class="ui-tips-pop">
-					<i class="arrow right"></i>
-					<i class="arrow right1"></i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
-					<div class="cnt"></div>
+					<i class="arrow right">&#9670;</i>
+					<i class="arrow right1">&#9670;</i>
+					<a href="javascript:;" role="button" class="close">&times;</a>
+					<div class="cnt1">非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）</div>
 				</div>
 				<br><br><br><br>
 				<div class="ui-tips-pop">
-					<i class="arrow bottom"></i>
-					<i class="arrow bottom1"></i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
-					<div class="cnt"></div>
+					<i class="arrow bottom">&#9670;</i>
+					<i class="arrow bottom1">&#9670;</i>
+					<a href="javascript:;" role="button" class="close">&times;</a>
+					<div class="cnt1">非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）</div>
 				</div>
 				<br><br><br><br>
 				<div class="ui-tips-pop">
-					<i class="arrow left"></i>
-					<i class="arrow left1"></i>
-					<a href="javascript:;" role="button" class="vipFont if-close">&#xe609;</a>
-					<div class="cnt"></div>
+					<i class="arrow left">&#9670;</i>
+					<i class="arrow left1">&#9670;</i>
+					<a href="javascript:;" role="button" class="close">&times;</a>
+					<div class="cnt1">非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）</div>
+				</div>
+				<br><br><br><br>
+				<div class="ui-tips-pop ui-tips-pop-1">
+					<i class="arrow left">&#9670;</i>
+					<i class="arrow left1">&#9670;</i>
+					<a href="javascript:;" role="button" class="close">&times;</a>
+					<div class="cnt1">非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）</div>
 				</div>
 				<br><br><br><br>
 				<p class="code">
 					&lt;div class="ui-tips-pop"&gt;
-						&lt;i class="arrow top"&gt;&lt;/i&gt;
-						&lt;i class="arrow top1"&gt;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
-						&lt;div class="cnt"&gt;&lt;/div&gt;
+						&lt;i class="arrow top"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;i class="arrow top1"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&times;&lt;/a&gt;
+						&lt;div class="cnt1"&gt;非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）&lt;/div&gt;
 					&lt;/div&gt;
-
-					&lt;div class="ui-tips-pop"&gt;
-						&lt;i class="arrow right"&gt;&lt;/i&gt;
-						&lt;i class="arrow right1"&gt;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
-						&lt;div class="cnt"&gt;&lt;/div&gt;
+					&lt;div class="ui-tips-pop ui-tips-pop-1"&gt;
+						&lt;i class="arrow top"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;i class="arrow top1"&gt;&amp;#9670;&lt;/i&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&times;&lt;/a&gt;
+						&lt;div class="cnt1"&gt;非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）&lt;/div&gt;
 					&lt;/div&gt;
-
-					&lt;div class="ui-tips-pop"&gt;
-						&lt;i class="arrow bottom"&gt;&lt;/i&gt;
-						&lt;i class="arrow bottom1"&gt;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
-						&lt;div class="cnt"&gt;&lt;/div&gt;
-					&lt;/div&gt;
-
-					&lt;div class="ui-tips-pop"&gt;
-						&lt;i class="arrow left"&gt;&lt;/i&gt;
-						&lt;i class="arrow left1"&gt;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
-						&lt;div class="cnt"&gt;&lt;/div&gt;
-					&lt;/div&gt;
+				</p>
+			</section>
+			<section class="m-box" id="pagging">
+				<h3 class="u-type">pagging</h3>
+				<p class="bs-tips">1、列表页主翻页（完整），引入<em>.ui-pagging</em></p>
+				<p class="ui-pagging">
+					<span class="total">共582条</span>
+					<a href="#"><i class="arrow">&#8249;</i></a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a class="curr">5</a>
+					<a href="#">6</a>
+					<a href="#">…</a>
+					<a href="#">10</a>
+					<a href="#"><i class="arrow">&#8250;</i></a>
+				</p>
+				<br><br>
+				<p class="code">
+					&lt;p class="ui-pagging"&gt;
+						&lt;span class="total"&gt;共582条&lt;/span&gt;
+						&lt;a href="#"&gt;&lt;i class="arrow"&gt;&amp;#8249;&lt;/i&gt;&lt;/a&gt;
+						&lt;a href="#"&gt;1&lt;/a&gt;
+						&lt;a href="#"&gt;2&lt;/a&gt;
+						&lt;a href="#"&gt;3&lt;/a&gt;
+						&lt;a href="#"&gt;4&lt;/a&gt;
+						&lt;a class="curr"&gt;5&lt;/a&gt;
+						&lt;a href="#"&gt;6&lt;/a&gt;
+						&lt;a href="#"&gt;…&lt;/a&gt;
+						&lt;a href="#"&gt;10&lt;/a&gt;
+						&lt;a href="#"&gt;&lt;i class="arrow"&gt;&amp;#8250;&lt;/i&gt;&lt;/a&gt;
+					&lt;/p&gt;
+				</p>
+				<p class="bs-tips">2、列表页主翻页（简版），引入<em>.ui-pagging .ui-pagging-mini</em></p>
+				<p class="ui-pagging ui-pagging-mini">
+					<span class="total"><em>1</em>/5</span>
+					<a href="#"><i class="arrow">&#8249;</i></a>
+					<a href="#" class="next">下一页<i class="arrow">&#8250;</i></a>
+				</p>
+				<p class="ui-pagging ui-pagging-mini">
+					<span class="total"><em>1</em>/5</span>
+					<a class="disable"><i class="arrow">&#8249;</i></a>
+					<a href="#" class="next">下一页<i class="arrow">&#8250;</i></a>
+				</p>
+				<br><br>
+				<p class="code">
+					&lt;p class="ui-pagging ui-pagging-mini"&gt;
+						&lt;span class="total"&gt;共582条&lt;/span&gt;
+						&lt;a href="#"&gt;&lt;i class="arrow"&gt;&amp;#8249;&lt;/i&gt;&lt;/a&gt;
+						&lt;a href="#"&gt;1&lt;/a&gt;
+						&lt;a href="#"&gt;2&lt;/a&gt;
+						&lt;a href="#"&gt;3&lt;/a&gt;
+						&lt;a href="#"&gt;4&lt;/a&gt;
+						&lt;a class="curr"&gt;5&lt;/a&gt;
+						&lt;a href="#"&gt;6&lt;/a&gt;
+						&lt;a href="#"&gt;…&lt;/a&gt;
+						&lt;a href="#"&gt;10&lt;/a&gt;
+						&lt;a href="#"&gt;&lt;i class="arrow"&gt;&amp;#8250;&lt;/i&gt;&lt;/a&gt;
+					&lt;/p&gt;
 				</p>
 			</section>
 		</article>
