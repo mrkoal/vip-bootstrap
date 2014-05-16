@@ -7,7 +7,7 @@
 @font-face {
   font-family: 'vipFont';
   src: url('{$fontDomain}/fonts/vipFont.eot');
-  src: url('{$fontDomain}/fonts/vipFont.eot?#iefix') format('embedded-opentype'),url('{$fontDomain}/fonts/vipFont.woff') format('woff'),url('{$fontDomain}/fonts/vipFont.ttf') format('truetype'),url('{$fontDomain}/fonts/vipFont.svg#vipFont') format('svg');
+  src: url('{$fontDomain}/fonts/vipFont.eot?#iefix') format('embedded-opentype'),url('{$fontDomain}/fonts/vipFont.svg#vipFont') format('svg'),url('{$fontDomain}/fonts/vipFont.woff') format('woff'),url('{$fontDomain}/fonts/vipFont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -32,6 +32,12 @@
 .ui-btn-tips {
   text-decoration: none;
   vertical-align: top;
+}
+
+.ui-btn-big:hover,
+.ui-btn-nor:hover,
+.ui-btn-mini:hover {
+  text-decoration: none;
 }
 
 .ui-btn-big {
@@ -198,7 +204,7 @@
   background-image: -moz-linear-gradient(top, #e03589, #dd2f82);
   background-image: linear-gradient(to bottom, #e03589, #dd2f82);
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e03589, endcolorstr=#dd2f82);
-  color: #f4eaee;
+  color: #fff;
   border: 1px solid #ce2b78;
 }
 
@@ -209,7 +215,7 @@
   background-image: -moz-linear-gradient(top, #e44493, #e23e8b);
   background-image: linear-gradient(to bottom, #e44493, #e23e8b);
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e44493, endcolorstr=#e23e8b);
-  color: #f4eaed;
+  color: #fff;
 }
 
 .ui-btn1:active {
@@ -219,7 +225,7 @@
   background-image: -moz-linear-gradient(top, #da3083, #dc3386);
   background-image: linear-gradient(to bottom, #da3083, #dc3386);
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#da3083, endcolorstr=#dc3386);
-  color: #ebe1e7;
+  color: #fff;
   -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
@@ -502,9 +508,8 @@
   position: absolute;
   height: 14px;
   *overflow: hidden;
-  font: normal 14px/14px \5B8B\4F53 Hiragino Sans GB;
-  font-size: 25px\9;
-  _line-height: 18px;
+  font: normal 14px/14px \5B8B\4F53,Hiragino Sans GB;
+  _line-height: 16px;
 }
 
 .ui-tips-pop .bottom {
