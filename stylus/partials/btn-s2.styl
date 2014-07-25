@@ -1,289 +1,211 @@
 // @use : vip bootstrap button
 // @editor : mss.huang
-// @last modified time : 2014.3.14
-// @verson : 0.5
+// @last modified time : 2014.7.24
+// @verson : 3.0
 
 
 //按钮通用样式
-$btn-normal-style {
-	text-decoration: none;
-	vertical-align: top;
-}
+$btn-normal-style
+    display inline-block
+    border-radius 3px
+    text-decoration none
+    vertical-align top
+    transition .3s
 
 // 按钮hover下划线去掉
 .ui-btn-big:hover
 .ui-btn-nor:hover
 .ui-btn-mini:hover
-	text-decoration none
+    text-decoration none
 
 // 大按钮
-.ui-btn-big {
-	display: inline-block;
-	padding: 0 28px;
-	font: 18px/42px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
-	overflow hidden
-	height: 42px;
-	border-radius: 5px;
-	@extends $btn-normal-style;
+.ui-btn-big
+    padding 0 29px
+    font 18px/42px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53')
+    @extends $btn-normal-style
 
-	i {
-		margin-right: 13px;
-	}
+    i
+        margin-right 6px
 
-	.if-shopping-bag {
-		font-size: 22px;
-		vertical-align: text-bottom;
-		_vertical-align: baseline;
-	}
+    .if-shopping-bag
+        font-size 22px
+        vertical-align text-bottom
+        _vertical-align baseline
 
-	.if-card {
-		font-size: 20px;
-		vertical-align: -2px;
-		_vertical-align: baseline;
-	}
-}
+    .if-card
+        font-size 20px
+        vertical-align -2px
+        _vertical-align baseline
 
-// 消除ie9的滤镜
-:root .ui-btn-big,
-:root .ui-btn-big:hover,
-:root .ui-btn-big:active,
-:root .ui-btn-nor,
-:root .ui-btn-nor:hover,
-:root .ui-btn-nor:active,
-:root .ui-btn-mini,
-:root .ui-btn-mini:hover,
-:root .ui-btn-mini:active,
-:root .ui-btn-tips,
-:root .ui-btn-tips:hover,
-:root .ui-btn-tips:active, {
-	filter: none;
-}
 
 // 普通按钮
-.ui-btn-nor {
-	display: inline-block;
-	padding: 0 25px;
-	font: 12px/28px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
-	height: 28px;
-	border-radius: 4px;
-	@extends $btn-normal-style;
+.ui-btn-nor
+    padding 0 25px
+    font 14px/28px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53')
+    @extends $btn-normal-style
 
-	.vipFont {
-		font-size: 15px;
-		vertical-align: text-top;
-		_vertical-align: baseline;
-		margin-right: 7px;
-	}
+    .vipFont
+        font-size 15px
+        vertical-align text-top
+        _vertical-align baseline
+        margin-right 7px
 
-	.ui-btn-txt {
-		margin-left: 7px;
-	}
-}
+    .ui-btn-txt
+        margin-left 7px
 
 // 小按钮
-.ui-btn-mini {
-	display: inline-block;
-	padding: 0 10px;
-	font: 12px/18px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
-	*line-height: 19px;
-	height: 18px;
-	border-radius: 4px;
-	@extends $btn-normal-style;
+.ui-btn-mini
+    display inline-block
+    padding 0 10px
+    font 12px/18px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53')
+    height 18px
+    border-radius 3px
+    @extends $btn-normal-style
 
-	.ii-loading {
-		vertical-align: top;
-		margin-top: 1px;
-	}
-}
+    .ii-loading
+        vertical-align top
+        margin-top 1px
 
 // 提示功能类大按钮
-.ui-btn-tips {
-	display: inline-block;
-	padding: 0 11px;
-	font: 14px/34px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
-	border-radius: 3px;
-	transition: all .5s ease-out;
-	-webkit-transition: all .5s ease-out;
-	color: #181818;
-	background: rgba(255,255,255,.8);
-	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ccffffff, endcolorstr=#ccffffff)');
-	@extends $btn-normal-style;
+.ui-btn-tips
+    display inline-block
+    padding 0 11px
+    font 14px/34px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53')
+    border-radius 3px
+    transition all .5s ease-out
+    -webkit-transition all .5s ease-out
+    color #181818
+    background rgba(255,255,255,.8)
+    filter s('progidDXImageTransform.Microsoft.gradient(startcolorstr=#ccffffff, endcolorstr=#ccffffff)')
+    @extends $btn-normal-style
 
-	i {
-		margin-right: 5px;
-	}
+    i
+        margin-right 5px
 
-	.if-add {
-		color: #3c9705;
-		font-size: 12px;
-	}
+    .if-add
+        color #3c9705
+        font-size 12px
 
-	.if-close {
-		display: inline-block;
-		_display: inline;
-		color: #f10123;
-		font-size: 10px;
-		-webkit-transform: scale(.83);
-	}
+    .if-close
+        display inline-block
+        _display inline
+        color #f10123
+        font-size 10px
+        -webkit-transform scale(.83)
 
-	.if-movie {
-		color: #db3184;
-		font-size: 13px;
-		margin: 0 0 0 5px;
-	}
+    .if-movie
+        color #db3184
+        font-size 13px
+        margin 0 0 0 5px
 
-	.if-tick {
-		display: inline-block;
-		_display: inline;
-		color: #3c9705;
-		font-size: 11px;
-		-webkit-transform: scale(.91);
-	}
+    .if-tick
+        display inline-block
+        _display inline
+        color #3c9705
+        font-size 11px
+        -webkit-transform scale(.91)
 
-	&:hover {
-		background: #fff;
-		color: #181818;
-		filter: none;
-	}
-}
+    &:hover
+        background #fff
+        color #181818
+        filter none
 
 // 提示功能类小按钮
 .ui-btn-tips1 {
-	padding: 0 6px;
-	font: 12px/24px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
+    padding: 0 6px
+    font: 12px/24px s('\5FAE\8F6F\96C5\9ED1,arial,\5B8B\4F53');
 
-	.if-heart {
-		display: inline-block;
-		_display: inline;
-		color: #9b9a9a;
-		font-size:9px;
-		-webkit-transform: scale(.75);
-	}
+    .if-heart {
+        display: inline-block;
+        _display: inline;
+        color: #9b9a9a;
+        font-size:9px;
+        -webkit-transform: scale(.75);
+    }
 }
 
 // 提示功能类按钮已点击
 .ui-btn-active {
-	background: #fff;
-	color: #181818;
-	filter: none;
+    background: #fff;
+    color: #181818;
+    filter: none;
 
-	.if-heart {
-		color: #cb2e7c;
-	}
+    .if-heart {
+        color: #cb2e7c;
+    }
 }
 
 
 // 唯品红按钮
-.ui-btn1 {
-	background-color: #df3286;
-	background-image: -webkit-linear-gradient(top,#e03589,#dd2f82);
-	background-image: linear-gradient(to bottom,#e03589,#dd2f82);
-	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e03589, endcolorstr=#dd2f82)');
-	color: #fff;
-	border: 1px solid #ce2b78;
+.ui-btn1
+    background-color #f10180
+    border 1px solid #f10180
 
-	&:hover {
-		background-color: #e3418f;
-		background-image: -webkit-linear-gradient(top,#e44493,#e23e8b);
-		background-image: linear-gradient(to bottom,#e44493,#e23e8b);
-		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e44493, endcolorstr=#e23e8b)');
-		color: #fff;
-	}
+    &
+    &:hover
+    &:active
+        color #fff
 
-	&:active {
-		background-color: #db3284;
-		background-image: -webkit-linear-gradient(top,#da3083,#dc3386);
-		background-image: linear-gradient(to bottom,#da3083,#dc3386);
-		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#da3083, endcolorstr=#dc3386)');
-		color: #fff;
-		box-shadow: inset 0 2px 4px rgba(0,0,0,.05);
-		-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.05);
-	}
-}
+    &:hover
+        background-color #f43499
+
+    &:active
+        background-color #d80173
 
 // 浅红按钮
-.ui-btn2 {
-	background-color: #fcf0f5;
-	background-image: -webkit-linear-gradient(top,#fdf5f8,#fbeef4);
-	background-image: linear-gradient(to bottom,#fdf5f8,#fbeef4);
-	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fdf5f8, endcolorstr=#fbeef4)')
-	color: #fb4892;
-	border: 1px solid #eea3c2;
+.ui-btn2
+    background-color #fcedf2
+    border 1px solid #ffbee0
 
-	&:hover {
-		background-color: #fef7fa;
-		background-image: -webkit-linear-gradient(top,#fefafb,#fdf4f8);
-		background-image: linear-gradient(to bottom,#fefafb,#fdf4f8);
-		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fefafb, endcolorstr=#fdf4f8)');
-		color: #fb4892;
-		border-color: #f38ab6;
-	}
+    &
+    &:hover
+    &:active
+        color #e00078
 
-	&:active {
-		background-color: #f9e6ee;
-		background-image: -webkit-linear-gradient(top,#f7e4ec,#fbe8f0);
-		background-image: linear-gradient(to bottom,#f7e4ec,#fbe8f0);
-		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f7e4ec, endcolorstr=#fbe8f0)');
-		color: #f965a2;
-		border-color: #f08ab4;
-		box-shadow: inset 0 2px 4px rgba(182,10,78,.08);
-		-webkit-box-shadow: inset 0 2px 4px rgba(182,10,78,.08);
-	}
-}
+    &:hover
+        background-color #fbf5f7
+
+    &:active
+        background-color #fcdee8
 
 // 浅灰按钮
-.ui-btn3 {
-	background-color: #f6f4f4;
-	background-image: -webkit-linear-gradient(top,#f8f8f8,#f3f0f0);
-	background-image: linear-gradient(to bottom,#f8f8f8,#f3f0f0);
-	filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f8f8f8, endcolorstr=#f3f0f0)')
-	color: #464646;
-	border: 1px solid #c3c3c3;
+.ui-btn3
+    background-color #fafafa
+    border 1px solid #c2c2c2
 
-	&:hover {
-		background-color: #f5f5f5;
-		background-image: -webkit-linear-gradient(top,#fcfbfb,#f0f0f0);
-		background-image: linear-gradient(to bottom,#fcfbfb,#f0f0f0);
-		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fcfbfb, endcolorstr=#f0f0f0)');
-		color: #464646;
-	}
+    &
+    &:hover
+    &:active
+        color #333
 
-	&:active {
-		background-color: #ecebeb;
-		background-image: -webkit-linear-gradient(top,#efeeee,#e8e7e7);
-		background-image: linear-gradient(to bottom,#efeeee,#e8e7e7);
-		filter: s('progid:DXImageTransform.Microsoft.gradient(startcolorstr=#efeeee, endcolorstr=#e8e7e7)');
-		color: #464646;
-		border-color: #c0bfc0;
-		box-shadow: inset 0 2px 4px rgba(182,10,78,.06);
-		-webkit-box-shadow: inset 0 2px 4px rgba(182,10,78,.06);
-	}
-}
+    &:hover
+        background-color #fff
+
+    &:active
+        background-color #f0f0f0
 
 // 按钮不可点击及处理中
-.ui-btn-disable {
-	&,&:hover,&:active {
-		border: 1px solid #c1c1c1;
-		color: #9b9a9a;
-		background: #d2d1d1;
-		cursor: not-allowed;
-	}
+.ui-btn-disable
+    &
+    &:hover
+    &:active
+        border 1px solid #d0d0d0
+        color #999
+        background #d0d0d0
+        cursor not-allowed
 
-	.ii-loading {
-		background-image: url('{$fontDomain}/img/loading_1.gif');
-	}
-}
+    .ii-loading
+        background-image url('{$fontDomain}/img/loading_1.gif')
 
 // 按钮loading动画
-.ii-loading {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    background-image: url('{$fontDomain}/img/loading.gif');
-   	background-repeat: no-repeat;
-   	overflow: hidden;
-}
+.ii-loading
+    width 16px
+    height 16px
+    display inline-block
+    vertical-align middle
+    background-image url('{$fontDomain}/img/loading.gif')
+    background-repeat no-repeat
+    overflow hidden
 
 // retina 兼容
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
@@ -291,21 +213,21 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
   .ii-loading {
-  	background-image: url('{$fontDomain}/img/loading@2x.gif');
-  	background-size: 16px 16px;
+    background-image: url('{$fontDomain}/img/loading@2x.gif');
+    background-size: 16px 16px;
   }
 
   .ui-btn-disable {
-  	.ii-loading {
-		background-image: url('{$fontDomain}/img/loading_1@2x.gif');
-		background-size: 16px 16px;
-	}
+    .ii-loading {
+        background-image: url('{$fontDomain}/img/loading_1@2x.gif');
+        background-size: 16px 16px;
+    }
   }
 }
 
 // 可以处理inline-block图片图标对文字产生的影响,和图片图标搭配，例如ii-loading
 .ui-btn-txt {
-	display: inline-block;
-	vertical-align: top;
-	*vertical-align: middle;
+    display: inline-block;
+    vertical-align: top;
+    *vertical-align: middle;
 }

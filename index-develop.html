@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>vip ui bootstrap</title>
 	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="js/html5.js"></script>
 	<![endif]-->
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/comm.css">
@@ -28,9 +28,6 @@
 				<p>3、为了提高灵活性和减少苦逼程度，以后会逐渐地增加font-face的方式来代替现在的图片icon，相关的注意情况后续会有Wiki说明，请注意。</p>
 			</section>
 			<section class="m-box" id="button">
-				<a href="javascript:;" role="button" class="ui-btn-nor ui-btn1">
-	<i class="vipFont if-shopping-bag">&#xe604;</i>放入购物袋
-</a>
 				<h3 class="u-type">Buttons</h3>
 				<p class="bs-tips">1、大按钮，先引入<em>.ui-btn-big</em>类作基础准备，大按钮中的图标引入对应的字体图标，图标颜色默认继承，可单独设置颜色。</p>
 				<p class="bs-info">唯品红按钮在前者增加<em>.ui-btn1</em>类</p>
@@ -90,7 +87,7 @@
 				<p class="code">
 					&lt;div class="ui-tips-big ui-tips1"&gt;
 						&lt;i class="vipFont if-sigh"&gt;&amp;#xe603;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;h4 class="title"&gt;警告&lt;/h4&gt;
 						&lt;p class="info"&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
@@ -105,7 +102,7 @@
 				<p class="code">
 					&lt;div class="ui-tips-big ui-tips2"&gt;
 						&lt;i class="vipFont if-info"&gt;&amp;#xe607;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;h4 class="title"&gt;通知&lt;/h4&gt;
 						&lt;p class="info"&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
@@ -120,7 +117,7 @@
 				<p class="code">
 					&lt;div class="ui-tips-big ui-tips3"&gt;
 						&lt;i class="vipFont if-sucess"&gt;&amp;#xe602;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;h4 class="title"&gt;警告&lt;/h4&gt;
 						&lt;p class="info"&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
@@ -135,7 +132,7 @@
 				<p class="code">
 					&lt;div class="ui-tips-big ui-tips4"&gt;
 						&lt;i class="vipFont if-wrong"&gt;&amp;#xe600;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;h4 class="title"&gt;警告&lt;/h4&gt;
 						&lt;p class="info"&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
@@ -148,7 +145,7 @@
 				</div>
 				<p class="code">
 					&lt;div class="ui-tips-nor ui-tips1"&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;p class="info"&gt;&lt;i class="vipFont if-sigh"&gt;&amp;#xe603;&lt;/i&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
 				</p>
@@ -159,7 +156,7 @@
 				</div>
 				<p class="code">
 					&lt;div class="ui-tips-nor ui-tips2"&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;p class="info"&gt;&lt;i class="vipFont if-info"&gt;&amp;#xe607;&lt;/i&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
 				</p>
@@ -170,7 +167,7 @@
 				</div>
 				<p class="code">
 					&lt;div class="ui-tips-nor ui-tips3"&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;p class="info"&gt;&lt;i class="vipFont if-sucess"&gt;&amp;#xe602;&lt;/i&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
 				</p>
@@ -181,7 +178,7 @@
 				</div>
 				<p class="code">
 					&lt;div class="ui-tips-nor ui-tips4"&gt;
-						&lt;a href="javascript:;" role="button" class="vipFont if-close"&gt;&amp;#xe609;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;p class="info"&gt;&lt;i class="vipFont if-wrong"&gt;&amp;#xe600;&lt;/i&gt;提示文字&lt;/p&gt;
 					&lt;/div&gt;
 				</p>
@@ -269,13 +266,13 @@
 					&lt;div class="ui-tips-pop"&gt;
 						&lt;i class="arrow top"&gt;&amp;#9670;&lt;/i&gt;
 						&lt;i class="arrow top1"&gt;&amp;#9670;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="close"&gt;&times;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;div class="cnt1"&gt;非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）&lt;/div&gt;
 					&lt;/div&gt;
 					&lt;div class="ui-tips-pop ui-tips-pop-1"&gt;
 						&lt;i class="arrow top"&gt;&amp;#9670;&lt;/i&gt;
 						&lt;i class="arrow top1"&gt;&amp;#9670;&lt;/i&gt;
-						&lt;a href="javascript:;" role="button" class="close"&gt;&times;&lt;/a&gt;
+						&lt;a href="javascript:;" role="button" class="close"&gt;&amp;times;&lt;/a&gt;
 						&lt;div class="cnt1"&gt;非常驻提示， 适用于报告类的提示气泡方向根据页面位置而定（含关闭按钮）&lt;/div&gt;
 					&lt;/div&gt;
 				</p>
@@ -357,31 +354,6 @@
 				<p>请选择颜色：<input type="color" id="selectColor1"><a href="javascript:;" role="button" class="ui-btn-mini ui-btn2" id="change1">确定</a></p>
 				<p>或输入颜色值：<input type="text" id="selectColor2"><a href="javascript:;" role="button" class="ui-btn-mini ui-btn2" id="change2">确定</a></p>
 			</div>
-		</div>
-		<script>
-			$(function  () {
-				var whichFont,
-					selectPop=$("#colorSelect");
-				$('.ui-tips-nor,.ui-tips-big,.ui-tips-pop:not(#colorSelect)').on('click', function(event) {
-					var x=event.pageX,
-						y=event.pageY,
-						w=$(window).width();
-					selectPop.fadeIn().css({left:x+304>=w?w-304:x-55,top:y-100});
-					whichFont=$(this);
-				});
-
-				$("#colorSelect .vipFont").on('click', function(event) {
-					selectPop.fadeOut();
-				});
-
-				$("#change1").on('click', function(event) {
-					whichFont.css({backgroundColor:$("#selectColor1").val()});
-				});
-
-				$("#change2").on('click', function(event) {
-					whichFont.css({backgroundColor:$("#selectColor2").val()});
-				});
-			})
-		</script>
-</body>
+		</div
+></body>
 </html>
